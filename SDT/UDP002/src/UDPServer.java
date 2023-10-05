@@ -10,11 +10,9 @@ public class UDPServer {
         DatagramSocket aSocket = null;
         int expectedSequenceNumber = 1;
 
-
         try {
             aSocket = new DatagramSocket(6789);
             byte[] buffer = new byte[1000];
-
 
             while (true) {
                 DatagramPacket request = new DatagramPacket(buffer, buffer.length);
@@ -28,13 +26,6 @@ public class UDPServer {
                 if (receivedSequenceNumber == expectedSequenceNumber) {
 
                     byte[] replyData = parts[1].getBytes();
-                    Set<Integer> temp = mensagensTemporárias.keySet();
-                    // Convert the set to a list
-
-                    List<Integer> keyTemp = new ArrayList<>(temp);
-                    Collections.sort(keyTemp);
-
-
 
                     DatagramPacket reply = new DatagramPacket(replyData, replyData.length, request.getAddress(), request.getPort());
 
@@ -49,32 +40,20 @@ public class UDPServer {
                     List<Integer> keyList = new ArrayList<>(keys);
 
 
-
-
-
                     Integer lastKey = keyList.get(keyList.size() - 1);
 
-                        while (mensagensTemporárias.containsKey(lastKey + 1)) {
-
-                            String tempMessage = mensagensTemporárias.remove(lastKey + 1);
-                            mensagensRecebidas.put(lastKey + 1, tempMessage);
-
-                            expectedSequenceNumber++;
-
-                            lastKey++;
-                        }
-                    if(!keyTemp.isEmpty()) {
-                        System.out.println(keyTemp.get(0));
-                        if(keyTemp.get(0) == 8) {
-                            String replyMessage = "waitingfor," + expectedSequenceNumber;
-                            System.out.println(replyMessage);
-                            reply = new DatagramPacket(replyMessage.getBytes(), replyMessage.length(),
-                                    request.getAddress(), request.getPort());
-                            aSocket.send(reply);
-                        }
+                    while (mensagensTemporárias.containsKey(lastKey + 1)) {
+                        String tempMessage = mensagensTemporárias.remove(lastKey + 1);
+                        mensagensRecebidas.put(lastKey + 1, tempMessage);
+                        expectedSequenceNumber++;
+                        lastKey++;
+                        String numero = String.valueOf(lastKey);
+                        String mensagem = numero + "," + receivedMessage;
+                        System.out.println("Mensagem recebida: " + mensagem);
+                        byte[] replyData2 = mensagem.getBytes();
+                        DatagramPacket resposta = new DatagramPacket(replyData2, replyData2.length, request.getAddress(), request.getPort());
+                        aSocket.send(resposta);
                     }
-
-
 
                 } else {
                     String replyMessage = "waitingfor," + expectedSequenceNumber;
