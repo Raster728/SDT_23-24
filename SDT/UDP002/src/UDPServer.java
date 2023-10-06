@@ -1,68 +1,41 @@
 import java.net.*;
 import java.io.*;
-import java.util.*;
+import java.util.HashMap;
 
 public class UDPServer {
 
+    public static HashMap<Integer, String> temporaryHash = new HashMap<Integer, String>();
+    public static HashMap<Integer, String> deliveredHash = new HashMap<Integer, String>();
+    public static int port;
+    public static InetAddress address;
+
     public static void main(String args[]) {
-        HashMap<Integer, String> mensagensRecebidas = new HashMap<Integer, String>();
-        HashMap<Integer, String> mensagensTemporárias = new HashMap<Integer, String>();
         DatagramSocket aSocket = null;
-        int expectedSequenceNumber = 1;
 
         try {
             aSocket = new DatagramSocket(6789);
+            int expectedNumber = 1;
             byte[] buffer = new byte[1000];
 
             while (true) {
                 DatagramPacket request = new DatagramPacket(buffer, buffer.length);
-
                 aSocket.receive(request);
-                String message = new String(request.getData()).trim();
-                String[] parts = message.split(",");
-                int receivedSequenceNumber = Integer.parseInt(parts[0]);
-                String receivedMessage = parts[1];
+                port = request.getPort();
+                address = request.getAddress();
 
-                if (receivedSequenceNumber == expectedSequenceNumber) {
+                String msgReceived = new String(request.getData());
+                String[] parts = msgReceived.split(",");
 
-                    byte[] replyData = parts[1].getBytes();
+                expectedNumber = processDeliveredMessages(expectedNumber, Integer.parseInt(parts[0]), msgReceived);
 
-                    DatagramPacket reply = new DatagramPacket(replyData, replyData.length, request.getAddress(), request.getPort());
-
-                    mensagensRecebidas.put(receivedSequenceNumber, receivedMessage);
-
+                if (temporaryHash.isEmpty()) {
+                    DatagramPacket reply = new DatagramPacket(parts[1].getBytes(), request.getLength(), request.getAddress(), request.getPort());
                     aSocket.send(reply);
-                    expectedSequenceNumber++;
-
-                    Set<Integer> keys = mensagensRecebidas.keySet();
-                    // Convert the set to a list
-
-                    List<Integer> keyList = new ArrayList<>(keys);
-
-
-                    Integer lastKey = keyList.get(keyList.size() - 1);
-
-                    while (mensagensTemporárias.containsKey(lastKey + 1)) {
-                        String tempMessage = mensagensTemporárias.remove(lastKey + 1);
-                        mensagensRecebidas.put(lastKey + 1, tempMessage);
-                        expectedSequenceNumber++;
-                        lastKey++;
-                        String numero = String.valueOf(lastKey);
-                        String mensagem = numero + "," + receivedMessage;
-                        System.out.println("Mensagem recebida: " + mensagem);
-                        byte[] replyData2 = mensagem.getBytes();
-                        DatagramPacket resposta = new DatagramPacket(replyData2, replyData2.length, request.getAddress(), request.getPort());
-                        aSocket.send(resposta);
-                    }
-
                 } else {
-                    String replyMessage = "waitingfor," + expectedSequenceNumber;
-                    DatagramPacket reply = new DatagramPacket(replyMessage.getBytes(), replyMessage.length(),
-                            request.getAddress(), request.getPort());
-                    mensagensTemporárias.put(receivedSequenceNumber, receivedMessage);
+                    byte [] m = ("waitingfor," + expectedNumber).getBytes();
+                    DatagramPacket reply = new DatagramPacket(m, m.length, request.getAddress(), request.getPort());
                     aSocket.send(reply);
                 }
-
             }
         } catch (SocketException e) {
             System.out.println("Socket: " + e.getMessage());
@@ -71,6 +44,27 @@ public class UDPServer {
         } finally {
             if (aSocket != null)
                 aSocket.close();
+        }
+
+    }
+
+    public static int processDeliveredMessages(int nLastMessageInOrder, int nCurrentMessage, String currentMessage) {
+        if (nCurrentMessage != nLastMessageInOrder) {
+            temporaryHash.put(nCurrentMessage, currentMessage);
+            return nLastMessageInOrder;
+        } else {
+            deliveredHash.put(nCurrentMessage, currentMessage);
+            int nextMessageNumber = nLastMessageInOrder + 1;
+
+            while (temporaryHash.containsKey(nextMessageNumber)) {
+                deliveredHash.put(nextMessageNumber, temporaryHash.get(nextMessageNumber));
+                DatagramPacket reply = new DatagramPacket(temporaryHash.get(nextMessageNumber).getBytes(), temporaryHash.get(nextMessageNumber).length(), address, port);
+                temporaryHash.remove(nextMessageNumber);
+
+                nextMessageNumber++;
+            }
+
+            return nextMessageNumber;
         }
     }
 }
