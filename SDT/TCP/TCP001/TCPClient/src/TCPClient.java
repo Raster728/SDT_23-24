@@ -1,7 +1,4 @@
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.EOFException;
-import java.io.IOException;
+import java.io.*;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
@@ -11,10 +8,18 @@ public class TCPClient {
         try{
             int serverPort = 7896; //porto do servidor
             s = new Socket("localhost", serverPort);
-            DataInputStream in = new DataInputStream( s.getInputStream());
-            DataOutputStream out = new DataOutputStream( s.getOutputStream());
-            out.writeUTF("mensagem em UTF"); //Envia os dados para o servidor
-            String data = in.readUTF(); // Bloqueia à espera da resposta do servidor
+            Person person = new Person("João", 1999);
+
+            ObjectInputStream in = new ObjectInputStream( s.getInputStream());
+            ObjectOutputStream out = new ObjectOutputStream( s.getOutputStream());
+
+
+            out.writeObject(person);
+
+            // Receba a resposta do servidor
+            String data = (String) in.readObject();
+
+
             System.out.println("Received: "+ data);
         }catch (UnknownHostException e){
             System.out.println("Sock:"+e.getMessage());
@@ -22,7 +27,9 @@ public class TCPClient {
             System.out.println("IO:" + e.getMessage());
         }catch (IOException e){
             System.out.println("IO:"+e.getMessage());
-        }finally {
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } finally {
             if(s!=null)
                 try {
                     s.close();

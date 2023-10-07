@@ -1,20 +1,17 @@
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.EOFException;
-import java.io.IOException;
+import java.io.*;
 import java.net.Socket;
 
 public class Connection extends Thread {
-    DataInputStream in;
-    DataOutputStream out;
+    ObjectInputStream in;
+    ObjectOutputStream  out;
     Socket clientSocket;
 
     public Connection (Socket aClientSocket) {
         try {
             // inicializa variáveis
             clientSocket = aClientSocket;
-            in = new DataInputStream( clientSocket.getInputStream());
-            out =new DataOutputStream( clientSocket.getOutputStream());
+            in = new ObjectInputStream ( clientSocket.getInputStream());
+            out =new ObjectOutputStream ( clientSocket.getOutputStream());
 
             this.start(); //executa o método run numa thread separada
 
@@ -27,15 +24,23 @@ public class Connection extends Thread {
     public void run(){
         try {
 
-            String data = in.readUTF(); //lê os dados do cliente
-            out.writeUTF(data); //envia a mensagem (resposta) ao cliente
+            Person person = (Person) in.readObject();
+            System.out.println("Recebido: " + person);
+
+            // Envie o nome da pessoa de volta como resposta
+            String response = "Nome da pessoa: " + person.getName();
+            out.writeObject(person.getName());
 
         } catch(EOFException e) {
             System.out.println("EOF:" + e.getMessage());
         } catch(IOException e) {
             System.out.println("IO:" + e.getMessage());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         } finally{
             try {
+                in.close();
+                out.close();
                 clientSocket.close();
             }catch (IOException e){
                 /*close failed*/
