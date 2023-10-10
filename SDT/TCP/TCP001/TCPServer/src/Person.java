@@ -5,10 +5,12 @@ public class Person implements Serializable {
     private int year;
     private String phoneNumber;
 
+    private Place place;
 
-    public Person(String _name, int _year){
+    public Person(String _name, Place _place, int _year){
         this.name = _name;
         this.year = _year;
+        this.place = _place;
     }
 
     public String getName(){
@@ -19,7 +21,7 @@ public class Person implements Serializable {
 
     public String getPhoneNumber() { return phoneNumber; }
 
-
+    public Place getPlace() { return place; }
     public void setName(String _name){
         this.name = _name;
     }
@@ -30,5 +32,5 @@ public class Person implements Serializable {
 
     public void setPhoneNumber(String _phoneNumber) { this.phoneNumber = _phoneNumber; }
 
-
+    public void  setPlace(Place _place) { this.place = _place; }
 }
