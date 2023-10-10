@@ -1,28 +1,34 @@
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.ObjectOutputStream;
-import java.io.FileOutputStream;
-import java.io.Serializable;
+import java.io.*;
 
 public class Person implements Serializable {
     private String name;
     private int year;
+    private String phoneNumber;
 
-    public Person(String name, int year) {
-        this.name = name;
-        this.year = year;
+
+    public Person(String _name, int _year){
+        this.name = _name;
+        this.year = _year;
     }
 
-    public String getName() {
+    public String getName(){
         return name;
     }
 
-    public int getYear() {
-        return year;
+    public int getYear() { return year; }
+
+    public String getPhoneNumber() { return phoneNumber; }
+
+
+    public void setName(String _name){
+        this.name = _name;
     }
 
-    @Override
-    public String toString() {
-        return "Name: " + name + "\nYear: " + year;
+    public void setYear(int _year){
+        this.year = _year;
     }
+
+    public void setPhoneNumber(String _phoneNumber) { this.phoneNumber = _phoneNumber; }
+
+
 }

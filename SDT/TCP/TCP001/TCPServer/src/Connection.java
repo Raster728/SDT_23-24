@@ -1,18 +1,18 @@
+import java.net.*;
 import java.io.*;
-import java.net.Socket;
 
 public class Connection extends Thread {
-    ObjectInputStream in;
-    ObjectOutputStream  out;
+    DataInputStream in;
+    DataOutputStream out;
+
     Socket clientSocket;
 
     public Connection (Socket aClientSocket) {
         try {
             // inicializa variáveis
             clientSocket = aClientSocket;
-            in = new ObjectInputStream ( clientSocket.getInputStream());
-            out =new ObjectOutputStream ( clientSocket.getOutputStream());
-
+            in = new DataInputStream( clientSocket.getInputStream());
+            out = new DataOutputStream( clientSocket.getOutputStream());
             this.start(); //executa o método run numa thread separada
 
         } catch(IOException e) {
@@ -20,27 +20,25 @@ public class Connection extends Thread {
         }
     }
 
-
     public void run(){
         try {
-
-            Person person = (Person) in.readObject();
-            System.out.println("Recebido: " + person);
-
-            // Envie o nome da pessoa de volta como resposta
-            String response = "Nome da pessoa: " + person.getName();
-            out.writeObject(person.getName());
+            Person P = null;
+            ObjectInputStream ois = new ObjectInputStream(in);
+            try{
+                P = (Person) ois.readObject();
+                //String Pname = P.getName();
+                String PLocality = P.getName();
+                out.writeUTF(PLocality); //envia a mensagem (resposta) ao cliente
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
 
         } catch(EOFException e) {
             System.out.println("EOF:" + e.getMessage());
         } catch(IOException e) {
             System.out.println("IO:" + e.getMessage());
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
         } finally{
             try {
-                in.close();
-                out.close();
                 clientSocket.close();
             }catch (IOException e){
                 /*close failed*/
