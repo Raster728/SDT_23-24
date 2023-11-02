@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="RMIClient">
+    <output-path>$PROJECT_DIR$/out/artifacts/RMIClient</output-path>
+    <root id="archive" name="RMIClient.jar">
+      <element id="module-output" name="RMIClient" />
+    </root>
+  </artifact>
+</component>
