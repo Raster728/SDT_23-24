@@ -1,0 +1,66 @@
+<component name="libraryTable">
+  <library name="lib2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-jmx-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-cli-picocli-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-jmx-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-json-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-console-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-contracts-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-cli-picocli-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-groovydoc-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-test-junit5-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-contracts-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-nio-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-test-junit5-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-testng-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-ginq-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-jsr223-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-test-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-nio-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-groovydoc-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-macro-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-templates-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-test-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-typecheckers-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-groovysh-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-docgenerator-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-json-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-sql-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-datetime-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-swing-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-astbuilder-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-servlet-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-swing-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-cli-commons-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-astbuilder-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-toml-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-ant-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-docgenerator-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-toml-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-ginq-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-groovysh-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-console-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-servlet-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-xml-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-testng-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-cli-commons-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-macro-library-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-xml-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-datetime-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-dateutil-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-jsr223-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-sql-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-ant-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-typecheckers-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-macro-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-dateutil-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-macro-library-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sprint 1/lib/groovy-templates-5.0.0-alpha-1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

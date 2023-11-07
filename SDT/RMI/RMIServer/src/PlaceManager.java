@@ -18,4 +18,10 @@ class PlaceManager extends UnicastRemoteObject implements PlacesListInterface{
     public ArrayList<Place> allPlaces() throws RemoteException {
         return placeList;
     }
+
+    @Override
+    public Place getPlace(Place p) throws RemoteException {
+
+        return null;
+    }
 }

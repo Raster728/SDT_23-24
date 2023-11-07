@@ -6,7 +6,29 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a67cc49d-3081-46a5-a123-478fda2239cb" name="Changes" comment="" />
+    <list default="true" id="a67cc49d-3081-46a5-a123-478fda2239cb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../Cliente/Cliente.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Cliente/src/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Cliente/src/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RMIServer/src/ObjectRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RMIServer/src/ObjectRegistryInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCP/TCP001/.idea/TCP001.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCP/TCP001/Sprint 1/Sprint 1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../TCP/TCP002/TCP002Server/.idea/TCP002Server.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../UDP001_Servidor/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Trabalho_Final/Trabalho_Final.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Trabalho_Final/src/Lider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Trabalho_Final/src/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Trabalho_Final/src/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RMIServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RMIServer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RMIServer/src/PlaceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RMIServer/src/PlaceManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RMIServer/src/PlacesListInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RMIServer/src/PlacesListInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TCP/TCP001/TCPClient/TCPClient.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../TCP/TCP001/TCPClient/TCPClient.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TCP/TCP001/TCPServer/TCPServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../TCP/TCP001/TCPServer/TCPServer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TCP/TCP002/TCP002Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../TCP/TCP002/TCP002Server/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,15 +54,10 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />

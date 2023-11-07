@@ -1,0 +1,66 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-typecheckers-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-jsr223-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-macro-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-sql-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-testng-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-astbuilder-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-macro-library-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-xml-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-groovysh-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-json-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-datetime-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-sql-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-toml-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-testng-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-jsr223-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-cli-picocli-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-groovydoc-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-groovydoc-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-docgenerator-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-typecheckers-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-servlet-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-templates-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-ginq-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-swing-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-nio-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-contracts-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-datetime-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-xml-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-macro-library-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-ginq-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-astbuilder-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-nio-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-templates-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-dateutil-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-console-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-test-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-ant-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-console-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-jmx-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-cli-picocli-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-test-junit5-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-docgenerator-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-toml-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-dateutil-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-groovysh-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-servlet-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-cli-commons-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-swing-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-cli-commons-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-ant-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-jmx-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-test-junit5-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-macro-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-contracts-5.0.0-alpha-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-json-5.0.0-alpha-1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/TCPServer/lib/groovy-test-5.0.0-alpha-1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
